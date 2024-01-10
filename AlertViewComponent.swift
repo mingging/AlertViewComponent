@@ -46,6 +46,7 @@ public class AlertView: UIView {
     var actionHandlerArray: [() -> ()] = []
     
     @objc func selectActionButton(_ sender: UIButton) {
+        self.dismiss()
         // handler 가 없는 경우를 위함
         if actionHandlerArray.count > sender.tag {
             actionHandlerArray[sender.tag]()
